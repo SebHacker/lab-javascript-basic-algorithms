@@ -79,9 +79,6 @@ while (variableToCheck[i] == variableToCheck[variableToCheck.length-i-1]){
 let loremIpsumParagraphs ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada finibus lectus id fermentum. Aenean non suscipit nisi. Donec sed diam sodales, dapibus ante vel, malesuada tellus. Pellentesque quis consequat sem, nec volutpat lectus. Proin sapien elit, viverra in ultricies sit amet, consequat quis risus. Praesent non luctus lorem, et dapibus libero. Sed venenatis non lorem hendrerit posuere. In hac habitasse platea dictumst. Nulla mauris quam, condimentum in dapibus vel, dignissim in orci. Pellentesque accumsan nisl a risus molestie tempor. Ut dignissim fringilla auctor. Nullam id luctus sem. Integer gravida est sed erat rutrum ultrices.Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque eget ante ligula. Nulla nisl ipsum, condimentum non purus luctus, egestas eleifend ex. Maecenas laoreet augue elit, ac condimentum purus venenatis eget. Nulla posuere est ac ornare auctor. Suspendisse vestibulum vehicula tristique. Sed nec orci felis. Aenean condimentum eleifend velit, non molestie felis cursus nec. Proin sagittis bibendum ligula maximus commodo.Integer nec magna eget est consectetur consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam posuere molestie commodo. Aenean et ipsum at tortor tincidunt bibendum vel venenatis urna. Suspendisse laoreet tempus ante eget eleifend. Praesent laoreet, dolor eu pulvinar gravida, lectus turpis ullamcorper ex, ut malesuada justo sem id eros. Quisque auctor, erat vel lacinia gravida, urna magna elementum mauris, id egestas quam risus non est. Nulla placerat nunc ut lorem fringilla, quis porta dolor convallis. Suspendisse eleifend aliquam massa sagittis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed risus vitae sapien luctus molestie. In ullamcorper sem et urna tincidunt, et ultricies neque auctor. Nunc tempor tincidunt risus. Praesent malesuada dignissim dolor, eget egestas lacus egestas nec. In rhoncus dui sit amet risus suscipit auctor. Nulla pharetra et est vitae molestie."
 
 let wordcounter = 1; 
-
-
-
 for (let i =0; i<loremIpsumParagraphs.length; i++){
   if(loremIpsumParagraphs[i]==" "){
     wordcounter +=1;
@@ -90,15 +87,15 @@ for (let i =0; i<loremIpsumParagraphs.length; i++){
 console.log(wordcounter);
 
 // reinitialisation de la variable wordcounter 
+
 wordcounter = 0;
 for (let i =0; i<loremIpsumParagraphs.length; i++){
-  if (i == 0 && loremIpsumParagraphs[i].toUpperCase =="E" && loremIpsumParagraphs[i+1].toUpperCase == "T"){
+  if (i == 0 && loremIpsumParagraphs[i].toUpperCase() =="E" && loremIpsumParagraphs[i+1].toUpperCase() == "T"){
     wordcounter +=1;
   } else if (i == loremIpsumParagraphs.length){
     break;
-  } else if(loremIpsumParagraphs[i].toUpperCase =="E" && loremIpsumParagraphs[i-1] == " " && loremIpsumParagraphs[i+1].toUpperCase == "T" && loremIpsumParagraphs[i+2].toUpperCase == " "){
+  } else if(loremIpsumParagraphs[i].toUpperCase() =="E" && loremIpsumParagraphs[i-1] == " " && loremIpsumParagraphs[i+1].toUpperCase() == "T" && loremIpsumParagraphs[i+2].toUpperCase() == " "){
     wordcounter +=1;
   }
 }
-
 console.log(wordcounter);
